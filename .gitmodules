@@ -7,3 +7,6 @@
 [submodule "almanac"]
 	path = almanac
 	url = git@github.com:mitre-atlas/almanac.git
+[submodule "ml-vulhub"]
+	path = ml-vulhub
+	url = git@github.com:mitre-atlas/ml-vulhub
