@@ -1,0 +1,9 @@
+[submodule "arsenal"]
+	path = arsenal
+	url = git@github.com:mitre-atlas/arsenal.git
+[submodule "caldera"]
+	path = caldera
+	url = git@github.com:mitre/caldera.git
+[submodule "almanac"]
+	path = almanac
+	url = git@github.com:mitre-atlas/almanac.git
