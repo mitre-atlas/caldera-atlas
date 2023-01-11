@@ -2,6 +2,8 @@
 
 This repository brings together several projects to enable adversary emulation and red-teaming of machine learning (ML) systems. It configures the MITRE CALDERA&trade; docker image with MITRE ATLAS&trade; plugins and provides sample ML services and environments for testing.
 
+### Summary of Projects:
+
 [CALDERA](https://caldera.mitre.org/) is a cyber security platform designed to easily automate adversary emulation, assist manual red-teams, and automate incident response.
 
 [MITRE ATLAS](https://atlas.mitre.org/) (The Adversarial Threat Landscape for AI Systems) is a knowledge base of adversary tactics, techniques, and procedures targeting ML systems.
@@ -15,21 +17,27 @@ Included ATLAS CALDERA Plugins:
 
 ### Basic Setup:
 
-1. Build the CALDERA docker image:
+1.  Clone the repo:
+```bash
+git clone --recursive git@github.com:mitre-atlas/caldera-atlas.git
+cd caldera-atlas
+```
+
+2. Build the CALDERA docker image:
 ```bash
 docker-compose build
 ```
 
-2. Run the CALDERA docker image with ATLAS plugins plugins (`almanac` and `arsenal`):
+3. Run the CALDERA docker image with ATLAS plugins plugins (`almanac` and `arsenal`):
 ```bash
 docker-compose up -d
 ```
 
-3. Access the CALDERA interface at [localhost](https://localhost:8888).
+4. Access the CALDERA interface at [localhost](https://localhost:8888).
 
 The default username/password is `admin`/`admin`
 
-4. Use CALDERA with the Almanac and Arsenal plugins.
+5. Use CALDERA with the Almanac and Arsenal plugins.
 
 If you aren't already familiar with CALDERA, start with the [CALDERA documentation](https://caldera.readthedocs.io/en/latest/Getting-started.html).
 
@@ -37,7 +45,7 @@ The Almanac and Arsenal plugins can be accessed under the Plugins heading on the
 
 Arsenal populates CALDERA with new Abilities that implement ATLAS techniques. It also adds new Adversary Profiles that use ATLAS techniques target ML services and resources. More information is available in the [Arsenal documentation](https://github.com/mitre-atlas/arsenal).
 
-5. Cleanup:
+6. Cleanup:
 ```bash
 docker-compose down
 ```
