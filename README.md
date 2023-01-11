@@ -2,6 +2,8 @@
 
 This repository brings together several projects to enable adversary emulation and red-teaming of machine learning (ML) systems. It configures the MITRE CALDERA&trade; docker image with MITRE ATLAS&trade; plugins and provides sample ML services and environments for testing.
 
+If you want to jump right in and get hands on, run the [quick start demo script](#quick-start-demo).
+
 ### Summary of Projects:
 
 [CALDERA](https://caldera.mitre.org/) is a cyber security platform designed to easily automate adversary emulation, assist manual red-teams, and automate incident response.
@@ -78,7 +80,21 @@ docker-compose exec mldev bash -c 'server=http://host.docker.internal:8888; curl
 
 4. Use the Abilities and Adversary Profiles provided by Arsenal to run an Operation targeting the ML services and resourcs in the sample environment.
 
+
 What ML assets can you discover and exfiltrate? What ML services can you discover, target, and attack?
 
 5. Cleanup:
 Run `docker-compose down` from both the `caldera-atlas` and `ml-vulhub/envs/example-00-ml-dev` directories.
+
+### Quick Start Demo
+The provided `demo.sh` script is a "one-click" script to setup CALDERA with ATLAS plugins and a sample target environment for adversary emulation and red-teaming.
+
+This will:
+- build any/all docker containers to run the `caldera` app and start the server in a `tmux` session
+- mount plugins at runtime of the docker container: `arsenal` , `almanac`
+- build any/all docker containers to run and set up an initial "victim" using `ml-vulhub`
+
+Run:
+```bash
+./demo.sh
+```
