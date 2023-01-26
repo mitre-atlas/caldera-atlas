@@ -1,0 +1,29 @@
+CALDERA-ATLAS
+Apache 2.0 license
+©2022-2023 The MITRE Corporation. ALL RIGHTS RESERVED
+Approved for public release. Distribution unlimited 22-3841.
+
+
+This project bundles the following dependencies:
+
+CALDERA
+Apache 2.0 license
+https://github.com/mitre/caldera/
+
+Almanac
+Apache 2.0 license
+©2022 The MITRE Corporation. ALL RIGHTS RESERVED
+Approved for public release. Distribution unlimited 21-2363.
+https://github.com/mitre-atlas/almanac
+
+Arsenal
+Apache 2.0 license
+©2022-2023 The MITRE Corporation. ALL RIGHTS RESERVED
+Approved for public release. Distribution unlimited 22-3841.
+https://github.com/mitre-atlas/arsenal
+
+ML VulHub
+Apache 2.0 license
+©2022-2023 The MITRE Corporation. ALL RIGHTS RESERVED
+Approved for public release. Distribution unlimited 22-3312.
+https://github.com/mitre-atlas/ml-vulhub
