@@ -1,12 +1,12 @@
 [submodule "arsenal"]
 	path = arsenal
-	url = git@github.com:mitre-atlas/arsenal.git
+	url = https://github.com/mitre-atlas/arsenal.git
 [submodule "caldera"]
 	path = caldera
-	url = git@github.com:mitre/caldera.git
+	url = https://github.com/mitre/caldera.git
 [submodule "almanac"]
 	path = almanac
-	url = git@github.com:mitre-atlas/almanac.git
+	url = https://github.com/mitre-atlas/almanac.git
 [submodule "ml-vulhub"]
 	path = ml-vulhub
-	url = git@github.com:mitre-atlas/ml-vulhub
+	url = https://github.com/mitre-atlas/ml-vulhub.git
