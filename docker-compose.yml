@@ -3,12 +3,11 @@ version: '3'
 services:
   caldera-atlas:
     build:
-      context: caldera 
-      dockerfile: Dockerfile
-      args:
-        TZ: "UTC" #TZ sets timezone for ubuntu setup
-        WIN_BUILD: "true" #WIN_BUILD is used to enable windows build in sandcat plugin
-    image: caldera:latest
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      - caldera
+    image: caldera-atlas:latest
     ports:
       - "8888:8888"
       - "8443:8443"
@@ -23,4 +22,11 @@ services:
       - ./almanac:/usr/src/app/plugins/almanac
       - ./arsenal:/usr/src/app/plugins/arsenal
       - ./arsenal/default.yml:/usr/src/app/conf/local.yml
-    command: --log DEBUG
+  caldera:
+    build:
+      context: caldera
+      dockerfile: Dockerfile
+      args:
+        TZ: "UTC" #TZ sets timezone for ubuntu setup
+        WIN_BUILD: "true" #WIN_BUILD is used to enable windows build in sandcat plugin
+    image: caldera:latest
